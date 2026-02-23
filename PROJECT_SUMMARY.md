@@ -12,9 +12,14 @@ The core concept: songs submitted by venue visitors are queued and played in ord
 
 ```
 Isi-VenueVibes/
-├── engine.py          # Core MusicQueue implementation (main logic)
-├── Core_Engine.py     # Placeholder / future core engine file (currently empty)
-└── test_queue.py      # Manual/unit tests for MusicQueue
+├── engine.py          # Core MusicQueue implementation (priority logic)
+├── Core_Engine.py     # Orchestrator (SoundCloud, Stripe, DB, Queue)
+├── main.py            # FastAPI Web Server (REST API)
+├── models.py          # SQLAlchemy models (SQLite)
+├── soundcloud_client.py # SoundCloud v2 API Client
+├── stripe_client.py   # Stripe Checkout Client
+├── test_queue.py      # Tests for Queue logic
+└── test_integration.py # Full system integration test
 ```
 
 ---
